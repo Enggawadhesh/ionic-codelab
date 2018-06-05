@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ReadmorelessPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>readmoreless</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<div *ngIf="text">
+		<div *ngIf="text.length <= limit">{{text}}</div>
+		<div *ngIf="truncating && text.length > limit">
+		  {{text | truncate : limit}}
+		  <button ion-button (click)="truncating = false">see more</button>
+		</div>
+		<div *ngIf="!truncating && text.length > limit">
+		  {{text}}
+		  <button ion-button (click)="truncating = true">see less</button>
+		</div>
+	</div>
+
+</ion-content>
