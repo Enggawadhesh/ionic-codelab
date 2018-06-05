@@ -1,8 +1,8 @@
 <ul>
-	<li>Run "npm install @yellowspot/ng-truncate --save" on teterminal</li>
+	<li>Run "npm install @yellowspot/ng-truncate --save" on terminal in project directory</li>
 	<li>Import TruncateModule in app.module.ts file like below</li>
 	<li>import { TruncateModule } from '@yellowspot/ng-truncate';</li>
-	<li>and add in imports[] in app.module.ts</li>
+	<li>and add 'TruncateModule' in imports[] in app.module.ts</li>
 	<li>Copy readmoreless folder in your pages folder</li>
 </ul>
 
