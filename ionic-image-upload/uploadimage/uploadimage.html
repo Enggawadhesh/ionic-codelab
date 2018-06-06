@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>uploadimage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-list>
+	    <ion-item>
+	      <button ion-button outline color="secondary" (click)="lib()">
+	        <ion-icon name="image"></ion-icon>
+		    </button>
+		    <button ion-button outline color="secondary" (click)="cam()">
+		      <ion-icon name="camera"></ion-icon>
+		    </button>
+	    </ion-item>
+	    <ion-item [hidden]="lastImage === null">
+	      <img class="img" src="{{ pathForImage(lastImage) }}">
+	    </ion-item>
+	    <ion-item>
+	      <button [disabled]="!lastImage" ion-button (click)="uploadimg()">
+			Upload image
+		  </button>
+	    </ion-item>
+	</ion-list>
+
+</ion-content>
